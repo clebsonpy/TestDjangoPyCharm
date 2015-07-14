@@ -17,7 +17,7 @@ def post_new(request):
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=True)
-            post.save()
+            post.save
 
             return redirect('blog.views.post_detail', pk=post.pk)
     else:
